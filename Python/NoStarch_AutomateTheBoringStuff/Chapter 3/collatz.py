@@ -16,11 +16,8 @@ while True:
         collatzNumber = input()
         try:
             collatzNumber = int(collatzNumber)
-            while True:
-                if collatzNumber == 1:
-                    break
-                else:
-                    collatzNumber = collatz(collatzNumber)
+            while collatzNumber != 1:
+                collatzNumber = collatz(collatzNumber)
         except ValueError:
             print('Please enter an integer')
     except KeyboardInterrupt:
